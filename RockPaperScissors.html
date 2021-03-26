@@ -1,0 +1,58 @@
+<html>
+<body>
+    
+</body>
+<script>
+
+// Create a function
+// Assign 3 values to it R,S and P
+// Randomly return one of these values
+function computerPlay() {
+let r = "ROCK";
+let p = "PAPER";
+let s = "SCISSORS";
+let number = Math.random()*3;
+if (number < 1) {return r;}
+else if (number < 2) {return p;}
+else {return s;}
+}
+//Decleare a function that is going to be play field
+//Assign values of how player is going to input his choice
+//Declare winner
+
+function letsPlay(playerSelection, computerSelection) {
+ playerSelection = prompt("Choose your weapon!","")   
+ playerSelection = playerSelection.toUpperCase();   
+computerSelection = computerPlay();
+ if (playerSelection === computerSelection) {return 0}
+
+ else if (playerSelection === "PAPER" && computerSelection === "ROCK") { return 1}
+
+ else if (playerSelection === "ROCK" && computerSelection === "SCISSORS") { return 1}
+
+ else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") { return 1}
+
+ else {return -1}
+}
+
+function game() {
+    let r1 = letsPlay()
+    let r2 = letsPlay()
+    let r3 = letsPlay()
+    let r4 = letsPlay()
+    let r5 = letsPlay()
+    
+if (r1 +r2 +r3 + r4 + r5 > 0) {return "You are the winner of the game!"}
+   else if (r1 +r2 +r3 + r4 + r5 < 0) {return "You lost the game!"} 
+   else {return "It\`s a mighty draw!"}
+    
+    
+    //if ("You win!" > "You lose!") {return "You are the winner of the game!"}
+    //else if ("You win!" < "You lose!") {return "You lost the game!"}
+    // else {return "It\`s a mighty draw!"}
+}
+
+
+</script>
+
+</html>
